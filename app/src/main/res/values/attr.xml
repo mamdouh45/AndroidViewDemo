@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RotationSeekBar">
+        <attr name="title" format="string"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="minValue" format="float"/>
+        <attr name="initProgress" format="integer" />
+    </declare-styleable>
+</resources>

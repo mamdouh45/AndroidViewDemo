@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidViewDemo</string>
+
+    <string name="info">provtX: %1$f\nprovtY: %2$f\nCameraDistance: %3$f*%4$f</string>
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/black"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/display_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:text="prvotX: 0\nprvotY: 0\nCamera:0"
+            android:textColor="#90ffffff"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/strip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/strip"/>
+
+        <ImageView
+            android:id="@+id/strip_projection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/strip_projection"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="Console"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="Reset"/>
+
+                <CheckBox
+                    android:id="@+id/info_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@id/reset"
+                    android:checked="true"
+                    android:text="Show Info"/>
+            </RelativeLayout>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/rotation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:title="setRotation"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/rotation_x"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:title="setRotationX"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/rotation_y"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:title="setRotationY"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/scale_x"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="10"
+                app:maxValue="10"
+                app:minValue="0"
+                app:title="setScaleX"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/scale_y"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="10"
+                app:maxValue="10"
+                app:minValue="0"
+                app:title="setScaleY"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/translation_x"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="50"
+                app:maxValue="500"
+                app:minValue="-500"
+                app:title="setTranslationX"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/translation_y"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="50"
+                app:maxValue="500"
+                app:minValue="-500"
+                app:title="setTranslationY"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/prvot_x"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="50"
+                app:title="setPrvotX"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/prvot_y"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="50"
+                app:title="setPrvotY"/>
+
+            <com.example.wangyeming.androidviewdemo.view.RotationSeekBar
+                android:id="@+id/camera_distance"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:initProgress="40"
+                app:maxValue="3240"
+                app:minValue="640"
+                app:title="setCameraDistance"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
