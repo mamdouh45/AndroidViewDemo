@@ -1,2 +1,4 @@
 # AndoirdViewDemo
-Demo for android view 
+Intuitive demo to learn view rotation, scale, translation
+
+![](/img/AndroidViewDemo.gif)
