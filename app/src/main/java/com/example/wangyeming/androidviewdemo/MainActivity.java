@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewPositionDemoActivity.class);
         startActivity(intent);
     }
+
+    public void gotoCanvasAndPaintDemo(View view) {
+        Intent intent = new Intent(this, CanvasAndPaintDemoActivity.class);
+        startActivity(intent);
+    }
 }

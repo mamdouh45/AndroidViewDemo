@@ -2,6 +2,7 @@ package com.example.wangyeming.androidviewdemo;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 
 /**
  * Created by wangyeming on 2017/2/14.
@@ -25,6 +26,12 @@ public class DisplayUtil {
         final DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         final float scale = metrics.density;
         return (int) ((pxValue / scale) + 0.5f);
+    }
+
+    public static int sp2dip(Context context, float sp) {
+        final DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, metrics);
+        return px;
     }
 
 
